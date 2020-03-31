@@ -5,7 +5,8 @@ function out = LogMSER(regions)
         disp(x ... 
         + ": BoudningBox: " + " X: " + regions(x).BoundingBox(1) + " Y: " ...
         +  regions(x).BoundingBox(2) + " Eccentricity: " + regions(x).Eccentricity ...
-        + " Solidity: " + regions(x).Solidity);
+        + " Solidity: " + regions(x).Solidity + " Area: " + regions(x).Area);
+        
     end
     
 end
