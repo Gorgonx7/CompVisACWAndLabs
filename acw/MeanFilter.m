@@ -1,9 +1,9 @@
 function OutputImage = MeanFilter(matrixSize, image)
 h = 1/(matrixSize * matrixSize) * ones(matrixSize);
 
-imfiltRed = conv2(h,image(:,:,1));
-imfiltGreen = conv2(h,image(:,:,2));
-imfiltBlue = conv2(h,image(:,:,3));
+imfiltRed = conv2(image(:,:,1),h, 'same');
+imfiltGreen = conv2(image(:,:,2),h, 'same');
+imfiltBlue = conv2(image(:,:,3),h, 'same');
 imfiltBlue = uint8(imfiltBlue);
 imfiltGreen = uint8(imfiltGreen);
 imfiltRed = uint8(imfiltRed);

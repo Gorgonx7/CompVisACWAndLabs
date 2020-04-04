@@ -1,5 +1,5 @@
 function out = standardImageAnalysis(GrayFilteredImage, OriginalImage)
-[mserRegions, mserConnComp] = detectMSERFeatures(GrayFilteredImage, 'RegionAreaRange',[700,8000]);
+[mserRegions, mserConnComp] = detectMSERFeatures(GrayFilteredImage, 'RegionAreaRange',[500,4000]);
 figure
 imshow(OriginalImage);
 title("MSER Regions");
@@ -14,7 +14,7 @@ LogMSER(mserStats);
 
 mserStats(filterIdx) = [];
 mserRegions(filterIdx) = [];
-
+LogMSER(mserStats);
 figure
  imshow(OriginalImage)
  hold on
