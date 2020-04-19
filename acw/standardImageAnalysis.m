@@ -21,5 +21,11 @@ figure
  plot(mserRegions, 'showPixelList', true,'showEllipses',false)
  title('After Removing Non-star fish Regions Based On Geometric Properties')
  hold off
+ 
+ % Look at averagge colour,
+ % edge detection to split overlapping images
+ % 
+ %
+ 
 end
 
